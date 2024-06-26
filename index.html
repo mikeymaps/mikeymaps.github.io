@@ -6,22 +6,32 @@
     <title>Maps and Music</title>
     <style>
       
-      body, html {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
       
-      .container {
-        text-align: center; /* Center align horizontally */
-      }
+        .container {
+            text-align: center; /* Center align horizontally */
+        }
+        
+        @font-face {
+            font-family: myFirstFont;
+            src: url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+        }
     
-      .centered-text {
-        max-width: 600px; /* Optional: Set a maximum width for the centered content */
-        padding: 20px;
-      }
+        .centered-text {
+            max-width: 600px; /* Optional: Set a maximum width for the centered content */
+            padding: 20px;
+            font-size: 9px;
+            letter-spacing: 5px;
+            font-family: myFirstFont;
+            color: #F6FFA8;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
       
     </style>
 </head>
