@@ -1,0 +1,14 @@
+const routes = {
+	"N25": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Bus_icon_brown.jpg",
+	"N43": "https://upload.wikimedia.org/wikipedia/commons/9/93/Bus_icon_d_blue.jpg", 
+	"N24": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Bus_icon_d_green.jpg", 
+	"N32": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Bus_icon_l_blue.jpg", 
+	"N55": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Bus_icon_l_green.jpg", 
+	"N57": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bus_icon_pink.jpg", 
+	"N49": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Bus_icon_purple.jpg",
+	"N40/41": "https://upload.wikimedia.org/wikipedia/commons/1/11/Bus_icon_red.jpg",
+	"N35": "https://upload.wikimedia.org/wikipedia/commons/8/88/Bus_icon_yellow.jpg",
+	"N1": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Bus_icon_brown.jpg",
+	"n20g": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Bus_icon_l_green.jpg",
+	"n20h": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Bus_icon_d_green.jpg", 
+}
