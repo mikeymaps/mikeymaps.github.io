@@ -13,7 +13,7 @@ export class NICEBusMap extends L.map {
         }
 
         super(id, default_params);
-        this.basemap_layer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {ext: 'png'});
+        this.basemap_layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
         this.basemap_layer.addTo(this);
         this.init_lat = lat;
         this.init_lon = lon;
