@@ -6,7 +6,6 @@ export class NICEBusMap extends L.map {
     constructor(id, lat, lon, zoom, geojson) {
         let default_params = {
             center: [lat, lon],
-            crs: L.CRS.EPSG3857,
             zoom: zoom,
             zoomControl: true,
             preferCanvas: false,
