@@ -9,6 +9,7 @@ export class NICEBusMap extends L.map {
             zoom: zoom,
             zoomControl: true,
             preferCanvas: false,
+            crs: L.CRS.EPSG3857
         }
 
         super(id, default_params);
@@ -42,9 +43,9 @@ export async function addRoute(map, route_id) {
 
     const layer = new RouteLayer(route_id, route_response, stops_response)
     layer.addTo(map);
-    map.flyToBounds(layer.getBounds(), {
-        duration: 1.5
-    });
+    // map.flyToBounds(layer.getBounds(), {
+    //     duration: 1.5
+    // });
     return layer; 
 }
 
@@ -218,9 +219,9 @@ L.Control.Home = L.Control.extend({
         L.DomEvent.on(controlUI, 'click', function (e) {
             L.DomEvent.stopPropagation(e);
             L.DomEvent.preventDefault(e);
-            map.flyToBounds(this._initialBounds, {
-                duration: 1.5
-            });
+            // map.flyToBounds(this._initialBounds, {
+            //     duration: 1.5
+            // });
         }, this);
 
         return controlDiv;

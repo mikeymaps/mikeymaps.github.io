@@ -15,7 +15,6 @@ body, html {
     position: relative;
     height: 100%;
     margin: 0;
-r;
 }
 
 .navbar {
@@ -91,7 +90,7 @@ iframe {
     display: flex;
     background-color: #f0f0f0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 5);
-    margin: 50px calc(50% - 145px) 10px
+    margin: 50px calc(50% - 150px) 10px
 }
 
 .circle-container img {
@@ -111,7 +110,8 @@ iframe {
 
 
 #about-text {
-    padding: 0px 450px;
+    width: 450px;
+    margin: 50px calc(50% - 225px) 10px;
 }
 
 h1 {
