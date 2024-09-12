@@ -4,50 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maps and Music</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <style>
-      
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-      
-        .container {
-            text-align: center; /* Center align horizontally */
-        }
-        
-        .centered-text {
-            max-width: 600px; /* Optional: Set a maximum width for the centered content */
-            padding: 20px;
-            font-size: 9px;
-            letter-spacing: 8px;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-        }
-      
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".content section");
+            const navLinks = document.querySelectorAll(".navbar a");
+
+            sections.forEach(section => {
+                section.style.display = section.id === "about" ? "block" : "none";
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+
+                    sections.forEach(section => {
+                        section.style.display = section.id === targetId ? "block" : "none";
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <div class="centered-text">
-            <h1>Hello, World!</h1>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="mmlogo.png" />
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#nice-bus-project">NICE Bus Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/robbinsmi/" target="_blank" class="linkedin-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mikeymaps/mikeymaps.github.io" target="_blank" class="linkedin-icon">
+                    <i class="fa-brands fa-github" style="color: #63E6BE;"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCRZTh0p4d5uWHz8TtiO_vFQ" target="_blank" class="linkedin-icon">
+                    <i class="fa-brands fa-youtube" style="color: #ed0707;"></i>
+                </a>
+            </div>
+            <section id="about">
+                <h1>About</h1>
+                <div class="circle-container">
+                    <img src="me.png" />
+                </div>
+                <p id="about-text">My name is Michael Robbins and according to the good people at the Queens Tech Jam, I'm a "Full Stack Engineer". Having said that, I 
+                    do have tangible experience creating interactive mapping products with the ArcGIS Javascript SDK, Leaflet, Mapbox, and React. 
+                    Also, I'm a full on python fanatic.<br><br>I wish I could be playing music right now, but coding sort of fulfills my obsessive compulsive, problem solving mind.
+                    <br><br>
+                    Check out my resume and NICE Bus Project. Click on the GitHub icon on the topright to view the repo.
+                </p>
+            </section>
+
+            <section id="resume">
+                <h1>Resume</h1>
+                <div id="iframe-container">
+                    <iframe frameborder="0" src="michael_robbins_resume_2024.pdf"></iframe>
+                </div>
+            </section>
+
+            <section id="nice-bus-project">
+                <h1>NICE Bus Project</h1>
+                <div id="iframe-container">
+                    <iframe frameborder="0" src="nicebus/index.html"></iframe>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h1>Contact</h1>
+                <form method="post" action="https://forms.un-static.com/forms/fb9444acd895109b5da7729897c22b1d61e3a730">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="email" name="email" placeholder="Enter your e-mail address" required>
+                    <textarea name="message" cols="40" rows="15"></textarea>
+                    <div class="g-recaptcha" data-sitekey="6Lc5MgIqAAAAAIE6MsZuQZ4N5sg56WpZ0u6QL589"></div>
+                    <button type="submit">Send</button>
+                    <div class="text-center">
+                        <p><small>(Powered by <a rel="nofollow" href="https://un-static.com/">Un-static Forms</a>)</small></p>
+                    </div>
+                </form>
+            </section>
         </div>
     </div>
-
-
-    <form method="post" action="https://forms.un-static.com/forms/fb9444acd895109b5da7729897c22b1d61e3a730">
-      <input type="text" name="name" placeholder="Enter your name" required>
-      <input type="email" name="email" placeholder="Enter your e-mail address" required>
-      <textarea name="message" cols="40" rows="15"></textarea>
-      <div class="g-recaptcha" data-sitekey="6Lc5MgIqAAAAAIE6MsZuQZ4N5sg56WpZ0u6QL589"></div>
-      <button type="submit">Send</button>
-      <div class="text-center">
-        <p><small>(Powered by <a rel="nofollow" href="https://un-static.com/">Un-static Forms</a>)</small></p>
-      </div>
-    </form>
-
-    
 </body>
 </html>
